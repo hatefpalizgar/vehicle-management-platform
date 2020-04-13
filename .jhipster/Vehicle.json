@@ -1,0 +1,55 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [],
+  "fields": [
+    {
+      "fieldName": "brand",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicleType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "plateCountry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "plateNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vin",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "manufacturedCountry",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20200409175057",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "no",
+  "entityTableName": "vehicle",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no",
+  "name": "Vehicle",
+  "javadoc": "The Vehicle entity.",
+  "embedded": false,
+  "applications": "*"
+}

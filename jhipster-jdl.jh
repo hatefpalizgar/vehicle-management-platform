@@ -1,0 +1,13 @@
+/**
+ * The Vehicle entity.
+ */
+entity Vehicle {
+	brand String,
+    model String,
+    vehicleType String,
+    plateCountry String,
+    plateNumber String,
+    vin String unique,
+    creationDate LocalDate,
+    manufacturedCountry String    
+}

@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Welcome!",
+    "subtitle": "Main Page of Vehicle Management Platform",
+    "logged": {
+      "message": "You are logged in as user \"{{username}}\"."
+    },
+    "question": "Contact us:",
+    "link": {
+      "homepage": "birkle IT homepage",
+      "follow": "MailBox"
+    }
+  }
+}

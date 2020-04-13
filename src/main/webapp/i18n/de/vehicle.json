@@ -1,0 +1,29 @@
+{
+  "vehicleManagementPlatformApp": {
+    "vehicle": {
+      "home": {
+        "title": "Vehicles",
+        "createLabel": "Vehicle erstellen",
+        "createOrEditLabel": "Vehicle erstellen oder bearbeiten",
+        "notFound": "No Vehicles found"
+      },
+      "created": "Vehicle erstellt mit ID {{ param }}",
+      "updated": "Vehicle aktualisiert mit ID {{ param }}",
+      "deleted": "Vehicle gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Vehicle {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Vehicle"
+      },
+      "brand": "Brand",
+      "model": "Model",
+      "vehicleType": "Vehicle Type",
+      "plateCountry": "Plate Country",
+      "plateNumber": "Plate Number",
+      "vin": "Vin",
+      "creationDate": "Creation Date",
+      "manufacturedCountry": "Manufactured Country"
+    }
+  }
+}

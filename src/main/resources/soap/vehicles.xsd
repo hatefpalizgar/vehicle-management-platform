@@ -1,0 +1,33 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://soap.web.hatef.birkle.com"
+        targetNamespace="http://soap.web.hatef.birkle.com"
+        elementFormDefault="qualified">
+
+    <element name="postVehiclesRequest">
+        <complexType>
+            <sequence>
+                <element name="record" type="tns:VehicleDetails" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="postVehiclesResponse">
+        <complexType>
+            <sequence>
+                <element name="VehicleDetails" type="tns:VehicleDetails"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="VehicleDetails">
+        <sequence>
+            <element name="brand" type="string"/>
+            <element name="model" type="string"/>
+            <element name="plateCountry" type="string"/>
+            <element name="vehicleType" type="string"/>
+            <element name="plateNumber" type="string"/>
+            <element name="vin" type="string"/>
+            <element name="creationDate" type="string"/>
+            <element name="manufacturedCountry" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

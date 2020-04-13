@@ -1,0 +1,63 @@
+<div class = "row justify-content-center">
+    <div class = "col-8">
+        <div *ngIf = "vehicle">
+            <h2><span jhiTranslate = "vehicleManagementPlatformApp.vehicle.detail.title">Vehicle</span> {{ vehicle.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class = "row-md jh-entity-details">
+                <dt><span jhiTranslate = "vehicleManagementPlatformApp.vehicle.brand">Brand</span></dt>
+                <dd>
+                    <span>{{ vehicle.brand }}</span>
+                </dd>
+                <dt><span jhiTranslate = "vehicleManagementPlatformApp.vehicle.model">Model</span></dt>
+                <dd>
+                    <span>{{ vehicle.model }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.vehicleType">Vehicle Type</span></dt>
+                <dd>
+                    <span>{{ vehicle.vehicleType }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.plateCountry">Plate Country</span></dt>
+                <dd>
+                    <span>{{ vehicle.plateCountry }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.plateNumber">Plate Number</span></dt>
+                <dd>
+                    <span>{{ vehicle.plateNumber }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.vin">Vin</span></dt>
+                <dd>
+                    <span>{{ vehicle.vin }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.creationDate">Creation Date</span></dt>
+                <dd>
+                    <span>{{ vehicle.creationDate }}</span>
+                </dd>
+                <dt><span
+                    jhiTranslate = "vehicleManagementPlatformApp.vehicle.manufacturedCountry">Manufactured Country</span></dt>
+                <dd>
+                    <span>{{ vehicle.manufacturedCountry }}</span>
+                </dd>
+            </dl>
+
+            <button type = "submit" (click) = "previousState()" class = "btn btn-info">
+                <fa-icon icon = "arrow-left"></fa-icon>&nbsp;<span
+                jhiTranslate = "entity.action.back">Back</span>
+            </button>
+
+            <button type = "button" [routerLink] = "['/vehicle', vehicle.id, 'edit']"
+                    class = "btn btn-primary">
+                <fa-icon icon = "pencil-alt"></fa-icon>&nbsp;<span
+                jhiTranslate = "entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

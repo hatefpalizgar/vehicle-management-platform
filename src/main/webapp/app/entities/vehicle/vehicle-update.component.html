@@ -1,0 +1,111 @@
+<div class = "row justify-content-center">
+    <div class = "col-8">
+        <form name = "editForm" role = "form" novalidate (ngSubmit) = "save()"
+              [formGroup] = "editForm">
+            <h2 id = "jhi-vehicle-heading"
+                jhiTranslate = "vehicleManagementPlatformApp.vehicle.home.createOrEditLabel">Create or edit a Vehicle</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class = "form-group" [hidden] = "!editForm.get('id')!.value">
+                    <label for = "id" jhiTranslate = "global.field.id">ID</label>
+                    <input type = "text" class = "form-control" id = "id" name = "id"
+                           formControlName = "id" readonly/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.brand"
+                           for = "field_brand">Brand</label>
+                    <input type = "text" class = "form-control" name = "brand"
+                           id = "field_brand" formControlName = "brand"/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.model"
+                           for = "field_model">Model</label>
+                    <input type = "text" class = "form-control" name = "model"
+                           id = "field_model" formControlName = "model"/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.vehicleType"
+                           for = "field_vehicleType">Vehicle Type</label>
+                    <input type = "text" class = "form-control" name = "vehicleType"
+                           id = "field_vehicleType" formControlName = "vehicleType"/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.plateCountry"
+                           for = "field_plateCountry">Plate Country</label>
+                    <input type = "text" class = "form-control" name = "plateCountry"
+                           id = "field_plateCountry" formControlName = "plateCountry"/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.plateNumber"
+                           for = "field_plateNumber">Plate Number</label>
+                    <input type = "text" class = "form-control" name = "plateNumber"
+                           id = "field_plateNumber" formControlName = "plateNumber"/>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.vin"
+                           for = "field_vin">Vin</label>
+                    <input type = "text" class = "form-control" name = "vin"
+                           id = "field_vin" formControlName = "vin"/>
+                    <div
+                        *ngIf = "editForm.get('vin')!.invalid && (editForm.get('vin')!.dirty || editForm.get('vin')!.touched)">
+                    </div>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.creationDate"
+                           for = "field_creationDate">Creation Date</label>
+                    <div class = "input-group">
+                        <input id = "field_creationDate" type = "text"
+                               class = "form-control" name = "creationDate" ngbDatepicker
+                               #creationDateDp = "ngbDatepicker"
+                               formControlName = "creationDate"/>
+                        <span class = "input-group-append">
+                            <button type = "button" class = "btn btn-secondary"
+                                    (click) = "creationDateDp.toggle()"><fa-icon
+                                icon = "calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "form-group">
+                    <label class = "form-control-label"
+                           jhiTranslate = "vehicleManagementPlatformApp.vehicle.manufacturedCountry"
+                           for = "field_manufacturedCountry">Manufactured Country</label>
+                    <input type = "text" class = "form-control"
+                           name = "manufacturedCountry" id = "field_manufacturedCountry"
+                           formControlName = "manufacturedCountry"/>
+                </div>
+            </div>
+
+            <div>
+                <button type = "button" id = "cancel-save" class = "btn btn-secondary"
+                        (click) = "previousState()">
+                    <fa-icon icon = "ban"></fa-icon>&nbsp;<span
+                    jhiTranslate = "entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type = "submit" id = "save-entity"
+                        [disabled] = "editForm.invalid || isSaving"
+                        class = "btn btn-primary">
+                    <fa-icon icon = "save"></fa-icon>&nbsp;<span
+                    jhiTranslate = "entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

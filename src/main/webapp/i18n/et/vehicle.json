@@ -1,0 +1,29 @@
+{
+  "vehicleManagementPlatformApp": {
+    "vehicle": {
+      "home": {
+        "title": "Vehicles",
+        "createLabel": "Lisa uus Vehicle",
+        "createOrEditLabel": "Lisa või muuda Vehicle",
+        "notFound": "No Vehicles found"
+      },
+      "created": "Uus Vehicle on loodud identifikaatoriga {{ param }}",
+      "updated": "Vehicle identifikaatoriga {{ param }} on muudetud",
+      "deleted": "Vehicle identifikaatoriga {{ param }} on kustutatud",
+      "delete": {
+        "question": "Kas olete kindel, et soovite kustutada Vehicle {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle"
+      },
+      "brand": "Brand",
+      "model": "Model",
+      "vehicleType": "Vehicle Type",
+      "plateCountry": "Plate Country",
+      "plateNumber": "Plate Number",
+      "vin": "Vin",
+      "creationDate": "Creation Date",
+      "manufacturedCountry": "Manufactured Country"
+    }
+  }
+}

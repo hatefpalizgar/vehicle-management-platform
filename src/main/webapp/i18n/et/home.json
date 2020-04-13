@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Tere tulemast!",
+    "subtitle": "sõidukihaldusplatvormi avaleht",
+    "logged": {
+      "message": "Olete sisse logitud kasutajana \"{{username}}\"."
+    },
+    "question": "Võtke meiega ühendust:",
+    "link": {
+      "homepage": "birkle IT homepage",
+      "follow": "MailBox"
+    }
+  }
+}
